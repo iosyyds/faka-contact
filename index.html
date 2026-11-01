@@ -2,25 +2,44 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="theme-color" content="#f8fafc"/>
-<title>甜甜发卡 - 联系我们 | 微信客服 NBIOSS</title>
-<meta name="description" content="甜甜发卡联系页面：24小时自动发卡平台，虚拟商品即拍即发，人工客服微信 NBIOSS，售前售后问题欢迎咨询。"/>
+<title>甜甜发卡 - 虚拟商品自动发卡平台 | 即拍即发 微信客服 NBIOSS</title>
+<meta name="description" content="甜甜发卡是一家专业的虚拟商品自动发卡平台，主营软件激活码、游戏点卡、视频会员、话费流量等虚拟卡密商品。支付宝安全支付，付款后自动秒发卡密，24小时无人值守，客服微信 NBIOSS。"/>
 <meta name="author" content="甜甜发卡"/>
 <meta name="robots" content="index, follow"/>
-<meta property="og:title" content="甜甜发卡 - 联系我们"/>
-<meta property="og:description" content="24小时自动发卡平台，虚拟商品即拍即发。人工客服微信 NBIOSS，售前售后欢迎咨询。"/>
+<meta property="og:title" content="甜甜发卡 - 虚拟商品自动发卡平台"/>
+<meta property="og:description" content="虚拟商品即拍即发，支付宝安全支付，付款后自动秒发卡密，24小时无人值守。客服微信 NBIOSS。"/>
 <meta property="og:type" content="website"/>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%234A90FE'/%3E%3Cstop offset='1' stop-color='%23FF9AA8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Cpath d='M22 16h20a6 6 0 0 1 6 6v20a6 6 0 0 1-6 6H22a6 6 0 0 1-6-6V22a6 6 0 0 1 6-6z' fill='none' stroke='%23fff' stroke-width='3'/%3E%3Cpath d='M26 22h12M26 32h12M26 42h8' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"/>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-  html { -webkit-text-size-adjust:100%; }
+  :root {
+    --text:#1D1D1F;
+    --muted:#86868B;
+    --muted2:#6E6E73;
+    --accent:#007AFF;
+    --accent-dark:#0071EB;
+    --bg:#ffffff;
+    --bg-soft:#F5F5F7;
+    --line:rgba(0,0,0,0.06);
+    --line2:rgba(0,0,0,0.05);
+    --blue:#4A90FE;
+    --peach:#FF9AA8;
+    --wechat:#07C160;
+    --wechat-dark:#06AD56;
+  }
+  html { scroll-behavior:smooth; scroll-padding-top:96px; -webkit-text-size-adjust:100%; }
   body {
     min-height:100vh;
-    background:#ffffff;
-    color:#1D1D1F;
+    background:var(--bg);
+    color:var(--text);
     font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    line-height:1.6;
   }
+  a { color:inherit; text-decoration:none; }
+  .wrap { max-width:980px; margin:0 auto; padding:0 22px; }
+
   /* ===== 顶部导航（Apple 液态玻璃胶囊）===== */
   nav {
     position:fixed; top:0; left:0; right:0; z-index:100;
@@ -32,7 +51,7 @@
     background:rgba(255,255,255,0.88);
     backdrop-filter:saturate(180%) blur(20px);
     -webkit-backdrop-filter:saturate(180%) blur(20px);
-    border:1px solid rgba(0,0,0,0.06);
+    border:1px solid var(--line);
     border-radius:30px;
     box-shadow:0 4px 24px rgba(0,0,0,0.06);
     display:flex; align-items:center; justify-content:space-between;
@@ -40,103 +59,215 @@
   }
   .brand { display:flex; align-items:center; gap:10px; cursor:pointer; user-select:none; }
   .brand svg { width:26px; height:26px; border-radius:8px; display:block; flex-shrink:0; }
-  .brand span { font-size:16px; font-weight:700; line-height:1.2; color:#1D1D1F; letter-spacing:-0.4px; }
+  .brand span { font-size:16px; font-weight:700; line-height:1.2; letter-spacing:-0.4px; }
   .nav-actions { display:flex; align-items:center; gap:10px; }
   .btn {
     height:36px; padding:0 16px; border-radius:980px;
     font-size:13px; font-weight:500; cursor:pointer; white-space:nowrap;
     display:flex; align-items:center; justify-content:center;
-    font-family:inherit; transition:all 0.2s ease; text-decoration:none;
+    font-family:inherit; transition:all 0.2s ease;
   }
-  .btn-outline {
-    background:transparent; color:#1D1D1F; border:1px solid rgba(0,0,0,0.18);
-  }
+  .btn-outline { background:transparent; color:var(--text); border:1px solid rgba(0,0,0,0.18); }
   .btn-outline:hover { background:rgba(0,0,0,0.04); }
   .btn-fill {
-    background:#007AFF; color:#fff; border:none; font-weight:600;
+    background:var(--accent); color:#fff; border:none; font-weight:600;
     box-shadow:0 2px 10px rgba(0,122,255,0.25);
   }
-  .btn-fill:hover { background:#0071EB; }
-  /* ===== 页面主体 ===== */
-  main { max-width:600px; margin:0 auto; padding:96px 22px 36px; }
-  .page-head { text-align:center; margin-bottom:32px; }
-  .page-head h2 {
-    font-size:28px; font-weight:700; letter-spacing:-0.8px; margin-bottom:10px;
+  .btn-fill:hover { background:var(--accent-dark); }
+
+  /* ===== Hero ===== */
+  .hero { padding:150px 0 70px; text-align:center; }
+  .hero .eyebrow {
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:12px; font-weight:600; color:var(--accent);
+    background:rgba(0,122,255,0.08);
+    border:1px solid rgba(0,122,255,0.18);
+    padding:6px 14px; border-radius:980px; margin-bottom:22px;
   }
-  .page-head p { font-size:14px; color:#86868B; line-height:1.7; }
-  /* 联系卡片 */
+  .hero .eyebrow svg { width:13px; height:13px; }
+  .hero h1 {
+    font-size:clamp(34px, 6vw, 52px);
+    font-weight:700; letter-spacing:-1.5px; line-height:1.15;
+    margin-bottom:18px;
+  }
+  .hero h1 em {
+    font-style:normal;
+    background:linear-gradient(120deg, var(--blue) 0%, var(--peach) 100%);
+    -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent; color:transparent;
+  }
+  .hero p.sub {
+    max-width:560px; margin:0 auto 30px;
+    font-size:15px; color:var(--muted2); line-height:1.9;
+  }
+  .hero .cta-row { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .hero .btn-big { height:44px; padding:0 26px; font-size:15px; }
+
+  /* ===== 区块通用 ===== */
+  section { padding:64px 0; }
+  .sec-head { text-align:center; margin-bottom:40px; }
+  .sec-head .eyebrow {
+    display:inline-block; font-size:12px; font-weight:600; color:var(--accent);
+    letter-spacing:1px; margin-bottom:10px;
+  }
+  .sec-head h2 { font-size:clamp(24px, 3.4vw, 32px); font-weight:700; letter-spacing:-0.8px; margin-bottom:12px; }
+  .sec-head p { max-width:560px; margin:0 auto; font-size:14px; color:var(--muted); line-height:1.9; }
+  .bg-soft { background:var(--bg-soft); }
+
+  /* ===== 关于平台 ===== */
+  .about-text { max-width:760px; margin:0 auto; font-size:15px; color:var(--muted2); line-height:2.05; }
+  .about-text p + p { margin-top:16px; }
+  .about-points {
+    max-width:760px; margin:30px auto 0;
+    display:grid; grid-template-columns:1fr; gap:14px;
+  }
+  .about-point {
+    display:flex; align-items:flex-start; gap:12px;
+    background:var(--bg); border:1px solid var(--line); border-radius:18px;
+    padding:16px 18px;
+  }
+  .about-point .ico {
+    width:36px; height:36px; border-radius:12px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg, rgba(74,144,254,0.12), rgba(255,154,168,0.14));
+  }
+  .about-point .ico svg { width:18px; height:18px; color:var(--accent); }
+  .about-point b { display:block; font-size:14px; margin-bottom:2px; }
+  .about-point span { font-size:13px; color:var(--muted); line-height:1.7; }
+
+  /* ===== 主营商品 ===== */
+  .goods-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:14px; }
+  .goods-card {
+    background:var(--bg); border:1px solid var(--line); border-radius:20px;
+    padding:20px 18px; display:flex; gap:14px; align-items:flex-start;
+    transition:transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .goods-card:hover { transform:translateY(-3px); box-shadow:0 10px 30px rgba(0,0,0,0.07); }
+  .goods-card .ico {
+    width:44px; height:44px; border-radius:14px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg, var(--blue) 0%, var(--peach) 100%);
+    box-shadow:0 4px 14px rgba(74,144,254,0.22);
+  }
+  .goods-card .ico svg { width:22px; height:22px; color:#fff; }
+  .goods-card b { display:block; font-size:15px; margin-bottom:3px; }
+  .goods-card span { font-size:12.5px; color:var(--muted); line-height:1.7; }
+  .goods-note { text-align:center; margin-top:26px; font-size:13px; color:var(--muted); }
+
+  /* ===== 购买流程 ===== */
+  .steps { display:grid; grid-template-columns:1fr; gap:16px; }
+  .step {
+    position:relative; background:var(--bg); border:1px solid var(--line);
+    border-radius:20px; padding:22px 20px 20px 64px;
+  }
+  .step .num {
+    position:absolute; left:20px; top:22px;
+    width:30px; height:30px; border-radius:50%;
+    background:linear-gradient(135deg, var(--blue), var(--peach));
+    color:#fff; font-size:14px; font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .step b { display:block; font-size:15px; margin-bottom:4px; }
+  .step span { font-size:13px; color:var(--muted); line-height:1.75; }
+  .steps-intro { text-align:center; max-width:620px; margin:0 auto 34px; font-size:14px; color:var(--muted); line-height:1.9; }
+
+  /* ===== 常见问题 ===== */
+  .faq-list { max-width:720px; margin:0 auto; }
+  details {
+    background:var(--bg); border:1px solid var(--line); border-radius:18px;
+    padding:0 20px; margin-bottom:12px; overflow:hidden;
+  }
+  summary {
+    list-style:none; cursor:pointer; user-select:none;
+    display:flex; align-items:center; justify-content:space-between; gap:14px;
+    padding:18px 0; font-size:14.5px; font-weight:600;
+  }
+  summary::-webkit-details-marker { display:none; }
+  summary::after {
+    content:""; width:10px; height:10px; flex-shrink:0;
+    border-right:2px solid var(--muted); border-bottom:2px solid var(--muted);
+    transform:rotate(45deg) translateY(-2px); transition:transform 0.2s ease;
+  }
+  details[open] summary::after { transform:rotate(-135deg) translateY(-2px); }
+  details .ans { padding:0 0 18px; font-size:13.5px; color:var(--muted2); line-height:1.85; }
+
+  /* ===== 联系我们 ===== */
   .contact-card {
-    background:#ffffff;
-    border:1px solid rgba(0,0,0,0.06);
+    background:var(--bg);
+    border:1px solid var(--line);
     border-radius:24px;
     box-shadow:0 8px 30px rgba(0,0,0,0.06);
     padding:28px 24px;
-    margin-bottom:20px;
+    max-width:620px; margin:0 auto;
   }
   .contact-row { display:flex; align-items:center; gap:14px; }
   .wechat-icon {
     width:52px; height:52px; border-radius:16px; flex-shrink:0;
-    background:linear-gradient(135deg,#07C160 0%,#06AD56 100%);
+    background:linear-gradient(135deg, var(--wechat) 0%, var(--wechat-dark) 100%);
     display:flex; align-items:center; justify-content:center;
     box-shadow:0 4px 14px rgba(7,193,96,0.28);
   }
   .wechat-icon svg { width:28px; height:28px; }
   .contact-info { flex:1; min-width:0; }
-  .contact-info .label { font-size:12px; color:#86868B; margin-bottom:4px; letter-spacing:0.2px; }
+  .contact-info .label { font-size:12px; color:var(--muted); margin-bottom:4px; letter-spacing:0.2px; }
   .contact-info .value {
-    font-size:19px; font-weight:700; letter-spacing:-0.3px; color:#1D1D1F;
-    display:flex; align-items:center; gap:8px;
+    font-size:19px; font-weight:700; letter-spacing:-0.3px;
+    display:flex; align-items:center; gap:8px; flex-wrap:wrap;
   }
   .copy-btn {
     height:30px; padding:0 14px; border-radius:980px; border:none; cursor:pointer;
-    background:#007AFF; color:#fff; font-size:12px; font-weight:600; font-family:inherit;
+    background:var(--accent); color:#fff; font-size:12px; font-weight:600; font-family:inherit;
     box-shadow:0 2px 8px rgba(0,122,255,0.25); transition:all 0.2s ease; flex-shrink:0;
   }
-  .copy-btn:hover { background:#0071EB; }
+  .copy-btn:hover { background:var(--accent-dark); }
   .copy-btn.copied { background:#34C759; box-shadow:0 2px 8px rgba(52,199,89,0.3); }
   .qr-box {
-    margin-top:22px; padding-top:22px; border-top:1px solid rgba(0,0,0,0.05);
+    margin-top:22px; padding-top:22px; border-top:1px solid var(--line2);
     display:flex; align-items:center; gap:18px;
   }
   .qr-placeholder {
-    width:116px; height:116px; border-radius:16px; flex-shrink:0;
+    width:112px; height:112px; border-radius:16px; flex-shrink:0;
     border:1.5px dashed #C7C7CC;
     display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px;
     background:#FAFAFA; color:#AEAEB2; font-size:11px;
   }
   .qr-placeholder svg { width:22px; height:22px; opacity:0.55; }
-  .qr-tip { font-size:12px; color:#86868B; line-height:1.8; }
-  .tip {
-    display:flex; align-items:flex-start; gap:8px;
-    background:#F5F5F7; border-radius:16px; padding:14px 16px;
-    font-size:12px; color:#6E6E73; line-height:1.7;
-  }
-  .tip svg { width:15px; height:15px; flex-shrink:0; margin-top:2px; color:#007AFF; }
+  .qr-tip { font-size:12px; color:var(--muted); line-height:1.8; }
+
   /* ===== 页脚 ===== */
-  footer { border-top:1px solid rgba(0,0,0,0.05); background:#F5F5F7; }
+  footer { border-top:1px solid var(--line); background:var(--bg-soft); }
   .footer-inner { max-width:980px; margin:0 auto; padding:48px 22px 36px; }
   .footer-brand { text-align:center; margin-bottom:12px; display:flex; align-items:center; gap:10px; justify-content:center; }
   .footer-brand svg { width:32px; height:32px; border-radius:9px; }
-  .footer-brand span { font-size:17px; font-weight:700; color:#1d1d1f; }
+  .footer-brand span { font-size:17px; font-weight:700; }
   .footer-desc {
-    font-size:12px; color:#86868B; line-height:1.7; max-width:300px; margin:0 auto; text-align:center;
+    font-size:12px; color:var(--muted); line-height:1.7; max-width:320px; margin:0 auto; text-align:center;
   }
   .footer-copy {
-    border-top:1px solid rgba(0,0,0,0.05); margin-top:28px; padding-top:20px; text-align:center;
-    font-size:11px; color:#86868B;
+    border-top:1px solid var(--line); margin-top:28px; padding-top:20px; text-align:center;
+    font-size:11px; color:var(--muted);
+  }
+
+  /* ===== 桌面端 ===== */
+  @media (min-width:768px) {
+    .about-points { grid-template-columns:repeat(3, 1fr); }
+    .goods-grid { grid-template-columns:repeat(4, 1fr); }
+    .goods-card { flex-direction:column; }
+    .steps { grid-template-columns:repeat(4, 1fr); }
+    .step { padding:22px 18px 20px; text-align:center; }
+    .step .num { position:static; margin:0 auto 14px; }
+    section { padding:84px 0; }
+    .hero { padding:170px 0 90px; }
   }
   @media (max-width:480px) {
     .btn { padding:0 12px; font-size:12px; }
     .nav-actions .btn-outline { display:none; }
-    .page-head h2 { font-size:25px; }
-    .contact-card { padding:22px 18px; }
-    .contact-info .value { font-size:17px; }
   }
 </style>
 </head>
 <body>
 
-<!-- 顶部导航 -->
+<!-- ===== 顶部导航 ===== -->
 <nav>
   <div class="nav-inner">
     <div class="brand" onclick="location.href='/'">
@@ -153,60 +284,211 @@
       <span>甜甜发卡</span>
     </div>
     <div class="nav-actions">
-      <a class="btn btn-outline" href="/faq.html">常见问题</a>
-      <a class="btn btn-fill" href="/">返回首页</a>
+      <a class="btn btn-outline" href="#faq">常见问题</a>
+      <a class="btn btn-fill" href="#contact">联系我们</a>
     </div>
   </div>
 </nav>
 
-<!-- 页面主体 -->
-<main>
-  <div class="page-head">
-    <h2>联系我们</h2>
-    <p>7×24 小时自动发货 · 人工客服在线答疑<br/>售前售后问题，欢迎随时咨询</p>
+<!-- ===== Hero ===== -->
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" stroke-linejoin="round"/></svg>
+      虚拟商品 · 即拍即发
+    </div>
+    <h1>专业的<em>虚拟商品</em><br/>自动发卡平台</h1>
+    <p class="sub">甜甜发卡提供软件激活码、游戏点卡、视频会员等各类虚拟卡密商品，支付宝安全支付，付款后自动秒发卡密，24 小时无人值守，全程自助、省心放心。</p>
+    <div class="cta-row">
+      <a class="btn btn-fill btn-big" href="#about">了解平台</a>
+      <a class="btn btn-outline btn-big" href="#contact">联系我们</a>
+    </div>
   </div>
+</header>
 
-  <!-- 微信联系卡片 -->
-  <div class="contact-card">
-    <div class="contact-row">
-      <div class="wechat-icon">
-        <svg viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9.5 4C5.36 4 2 6.91 2 10.5c0 2.02 1.06 3.83 2.72 5.03L4 18l2.63-1.38c.88.25 1.84.38 2.87.38.23 0 .45-.01.67-.03C10.08 19.34 12.14 20.5 14.5 20.5c.95 0 1.85-.15 2.66-.42L19.5 21.2l-.63-2.08c1.3-1.13 2.13-2.66 2.13-4.37 0-3.12-2.83-5.68-6.3-6.2A5.9 5.9 0 0 0 9.5 4zm-2.7 4.1a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zm7.1 0a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zM7.05 13.6c-1.32 0-2.4-1.08-2.4-2.4s1.08-2.4 2.4-2.4 2.4 1.08 2.4 2.4-1.08 2.4-2.4 2.4zm6.05 2.1c-1.35 0-2.45-1.1-2.45-2.45 0-.27.05-.52.13-.75A5.26 5.26 0 0 1 13.1 12c1.9 0 3.5 1.02 4.36 2.5a5.5 5.5 0 0 1-2.16.92c-.54.15-1.1.28-1.68.28h-.52z"/>
-        </svg>
+<!-- ===== 关于平台 ===== -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">ABOUT</span>
+      <h2>关于甜甜发卡</h2>
+      <p>一个专注虚拟商品交易的自助发卡平台，把选购到收货的每一步都做到简单、快速、可靠。</p>
+    </div>
+    <div class="about-text">
+      <p>甜甜发卡是一个专注虚拟商品交易的自助发卡平台。我们通过全自动化的发货系统，把「选购 — 支付 — 收货」的整个流程压缩到短短几秒钟：买家付款成功的那一刻，卡密就会自动发放到订单中，无需等待人工客服，真正做到即拍即发。</p>
+      <p>平台主营各类虚拟商品卡密与激活码，覆盖软件、游戏、影音、充值等常见品类，所有商品明码标价、库存实时更新。无论是白天还是深夜，是工作日还是节假日，甜甜发卡都始终在线，随时为你提供稳定、快速、省心的自助购物体验。</p>
+    </div>
+    <div class="about-points">
+      <div class="about-point">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div><b>省心</b><span>全程自助下单，付款即发货，无需等待、无需催单。</span></div>
       </div>
-      <div class="contact-info">
-        <div class="label">微信客服（推荐）</div>
-        <div class="value">
-          NBIOSS
-          <button class="copy-btn" id="copyBtn" onclick="copyWechat()">复制微信号</button>
+      <div class="about-point">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke-linecap="round"/></svg></div>
+        <div><b>放心</b><span>支付走官方安全通道，交易记录可查、可追溯。</span></div>
+      </div>
+      <div class="about-point">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 8v4l3 2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <div><b>安心</b><span>售前售后问题，微信客服随时响应，处理有始有终。</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 主营商品 ===== -->
+<section id="goods" class="bg-soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">SERVICES</span>
+      <h2>主营商品</h2>
+      <p>覆盖软件、游戏、影音、充值等常见虚拟品类，卡密现货，即买即发。</p>
+    </div>
+    <div class="goods-grid">
+      <div class="goods-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v18M5 8h14M5 16h14" stroke-linecap="round"/><rect x="3" y="4" width="18" height="16" rx="3"/></svg></div>
+        <div><b>软件激活码</b><span>常用软件激活码与密钥，即买即用，无需等待。</span></div>
+      </div>
+      <div class="goods-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6-5 6 5v10a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9z" stroke-linejoin="round"/><path d="M9 21v-6h6v6" stroke-linejoin="round"/></svg></div>
+        <div><b>游戏点卡</b><span>热门游戏点卡与道具卡密，充值方便快捷。</span></div>
+      </div>
+      <div class="goods-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="m10 9 5 3-5 3V9z" stroke-linejoin="round"/></svg></div>
+        <div><b>视频会员</b><span>主流视频平台会员卡券，追剧观影更尽兴。</span></div>
+      </div>
+      <div class="goods-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18V6l10-2v12" stroke-linejoin="round"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg></div>
+        <div><b>音乐会员</b><span>音乐平台会员与畅听卡，好音乐不间断。</span></div>
+      </div>
+      <div class="goods-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4z" stroke-linejoin="round"/><path d="M4 9h16M9 4v16" stroke-linecap="round"/></svg></div>
+        <div><b>话费流量</b><span>话费充值卡与流量包，通讯更轻松。</span></div>
+      </div>
+      <div class="goods-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5" stroke-linecap="round"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" stroke-linecap="round"/></svg></div>
+        <div><b>网盘会员</b><span>网盘超级会员与扩容卡，存储更从容。</span></div>
+      </div>
+      <div class="goods-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke-linecap="round"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke-linejoin="round"/></svg></div>
+        <div><b>课程资料</b><span>在线课程与学习资料卡密，知识随身带。</span></div>
+      </div>
+      <div class="goods-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" stroke-linecap="round"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6" stroke-linecap="round"/></svg></div>
+        <div><b>账号卡密</b><span>各类平台账号与兑换码，一站购齐。</span></div>
+      </div>
+    </div>
+    <p class="goods-note">商品持续上新中，更多虚拟好物等你发现。</p>
+  </div>
+</section>
+
+<!-- ===== 购买流程 ===== -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">HOW TO BUY</span>
+      <h2>如何购买</h2>
+    </div>
+    <p class="steps-intro">在甜甜发卡购物非常简单：只需四步，全流程自动化，付款后几秒钟即可收到卡密。</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <b>挑选商品</b>
+        <span>在商品页找到你需要的卡密商品，选择数量并提交订单。</span>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <b>在线支付</b>
+        <span>使用支付宝完成安全支付，款项实时到账，过程全程加密。</span>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <b>自动发货</b>
+        <span>系统检测到付款成功，立即自动发放卡密，无需人工介入。</span>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <b>查收卡密</b>
+        <span>在订单详情中复制卡密，即可马上使用，随买随用。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 常见问题 ===== -->
+<section id="faq" class="bg-soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>常见问题</h2>
+      <p>关于平台与购买，你想了解的都在这里。</p>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary>甜甜发卡是什么平台？</summary>
+        <div class="ans">甜甜发卡是一个虚拟商品自动发卡平台，主营各类卡密、激活码等虚拟商品。买家下单并完成支付后，系统会自动发货，无需人工等待。</div>
+      </details>
+      <details>
+        <summary>付款后多久能收到商品？</summary>
+        <div class="ans">支付成功后系统自动发货，卡密通常几秒内到账，可直接在订单详情中查看并复制使用。</div>
+      </details>
+      <details>
+        <summary>购买后卡密有问题怎么办？</summary>
+        <div class="ans">请保留你的订单号，添加微信客服 NBIOSS 并提供订单信息，我们核实后会尽快为你处理。</div>
+      </details>
+      <details>
+        <summary>平台支持哪些支付方式？</summary>
+        <div class="ans">平台支持支付宝安全支付，交易过程全程加密，资金与订单均有保障。</div>
+      </details>
+      <details>
+        <summary>如何联系平台客服？</summary>
+        <div class="ans">可通过微信联系客服（微信号 NBIOSS），售前咨询与售后问题都可以随时沟通。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 联系我们 ===== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">CONTACT</span>
+      <h2>联系我们</h2>
+      <p>售前咨询、售后处理、合作洽谈，欢迎随时联系微信客服。</p>
+    </div>
+    <div class="contact-card">
+      <div class="contact-row">
+        <div class="wechat-icon">
+          <svg viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.5 4C5.36 4 2 6.91 2 10.5c0 2.02 1.06 3.83 2.72 5.03L4 18l2.63-1.38c.88.25 1.84.38 2.87.38.23 0 .45-.01.67-.03C10.08 19.34 12.14 20.5 14.5 20.5c.95 0 1.85-.15 2.66-.42L19.5 21.2l-.63-2.08c1.3-1.13 2.13-2.66 2.13-4.37 0-3.12-2.83-5.68-6.3-6.2A5.9 5.9 0 0 0 9.5 4zm-2.7 4.1a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zm7.1 0a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zM7.05 13.6c-1.32 0-2.4-1.08-2.4-2.4s1.08-2.4 2.4-2.4 2.4 1.08 2.4 2.4-1.08 2.4-2.4 2.4zm6.05 2.1c-1.35 0-2.45-1.1-2.45-2.45 0-.27.05-.52.13-.75A5.26 5.26 0 0 1 13.1 12c1.9 0 3.5 1.02 4.36 2.5a5.5 5.5 0 0 1-2.16.92c-.54.15-1.1.28-1.68.28h-.52z"/>
+          </svg>
+        </div>
+        <div class="contact-info">
+          <div class="label">微信客服（推荐）</div>
+          <div class="value">
+            NBIOSS
+            <button class="copy-btn" id="copyBtn" onclick="copyWechat()">复制微信号</button>
+          </div>
+        </div>
+      </div>
+      <div class="qr-box">
+        <div class="qr-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/>
+            <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+            <path d="M14 14h3v3h-3zM20 14h1M17 17h1v1h-1zM14 20h3M20 20h1M20 17v1"/>
+          </svg>
+          微信二维码
+        </div>
+        <div class="qr-tip">
+          扫码添加客服微信<br/>
+          添加时请备注来意；售后问题请提供订单号，方便快速处理
         </div>
       </div>
     </div>
-    <div class="qr-box">
-      <div class="qr-placeholder">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg">
-          <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/>
-          <rect x="3" y="14" width="7" height="7" rx="1.5"/>
-          <path d="M14 14h3v3h-3zM20 14h1M17 17h1v1h-1zM14 20h3M20 20h1M20 17v1"/>
-        </svg>
-        微信二维码
-      </div>
-      <div class="qr-tip">
-        扫码添加客服微信<br/>
-        添加时请备注「发卡咨询」，方便更快通过
-      </div>
-    </div>
   </div>
+</section>
 
-  <div class="tip">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1" stroke-linecap="round"/>
-    </svg>
-    <span>下单后卡密自动秒发，无需等待客服。如遇发货异常、售后问题，请联系微信客服处理。</span>
-  </div>
-</main>
-
-<!-- 页脚 -->
+<!-- ===== 页脚 ===== -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
@@ -222,7 +504,7 @@
       </svg>
       <span>甜甜发卡</span>
     </div>
-    <p class="footer-desc">专业的虚拟商品自动发卡平台，支付宝安全支付，付款后自动秒发卡密，24小时无人值守。</p>
+    <p class="footer-desc">甜甜发卡是一家专业的虚拟商品自动发卡平台，支付宝安全支付，付款后自动秒发卡密，24 小时无人值守。</p>
     <div class="footer-copy">© 2026 甜甜发卡 · 客服微信 NBIOSS</div>
   </div>
 </footer>
